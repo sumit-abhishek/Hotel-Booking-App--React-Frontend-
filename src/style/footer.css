@@ -1,0 +1,59 @@
+.footer-main {
+  display: flex;
+  justify-content: center;
+  background-color: #5c1d0c;
+}
+.footer {
+  display: flex;
+  width: 1200px;
+  flex-direction: column;
+  gap: 5rem;
+}
+.footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+  color: #fff;
+}
+.footer-top ul {
+  padding: 0;
+}
+.footer-top ul > li {
+  padding-top: 10px;
+}
+.footer-top ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+.explore li:nth-child(1),
+.booking li:nth-child(1),
+.company li:nth-child(1),
+.support li:nth-child(1) {
+  margin-bottom: 2rem;
+}
+.footer-social-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.footer-bottom {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.footer-bottom-left {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.footer-bottom-right {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.footer-bottom-right a {
+  text-decoration: none;
+  color: white;
+}

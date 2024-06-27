@@ -1,0 +1,27 @@
+.faq-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.faq-main h2 {
+  color: #fff;
+}
+.faq {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  gap: 2rem;
+}
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.accordion-item {
+  border-radius: 5px !important;
+  overflow: hidden !important;
+}

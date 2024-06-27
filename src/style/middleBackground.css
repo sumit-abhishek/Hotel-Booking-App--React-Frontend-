@@ -1,0 +1,13 @@
+.middleBackground {
+  background: linear-gradient(
+      to top,
+      rgba(255, 251, 0, 0.379),
+      rgba(255, 136, 0, 0.299)
+    ),
+    url("../assets/why-us-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 10px;
+}

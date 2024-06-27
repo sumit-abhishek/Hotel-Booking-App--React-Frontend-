@@ -1,0 +1,32 @@
+.why-us-main {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.why-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+}
+.why-us-details {
+  padding-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card-why-us {
+  border: 1px solid #fff;
+  width: 30%;
+  height: 90%;
+  padding: 1rem;
+}
+.card-why-us-details {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}

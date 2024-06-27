@@ -1,0 +1,24 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
+}
+.search-bar-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 1200px;
+  gap: 3rem;
+}
+.search-bar-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.search-bar-details input {
+  text-align: center;
+}
