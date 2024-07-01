@@ -1,0 +1,35 @@
+.popular-facilities {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-facilities-left span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00cc00;
+}
+.popular-facilities-left p {
+  font-weight: bold;
+}
+.card-title {
+  font-weight: bold;
+}
+.roomCard {
+  background-image: url(../assets/room-card-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 8px 7px 8px #8e604e;
+  width: 90% !important;
+}
+.popular-facilities-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardImage {
+  object-fit: cover;
+  height: 100% !important;
+  width: 100%;
+}

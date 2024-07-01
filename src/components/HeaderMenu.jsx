@@ -6,7 +6,9 @@ const HeaderMenu = () => {
       <Link to="/" className="pointer">
         <a href="">Home</a>
       </Link>
-      <a href="#">Rooms</a>
+      <Link to="/rooms">
+        <a href="#">Rooms</a>
+      </Link>
       <a href="#">Blog</a>
       <a href="#">About</a>
       <Link to="/login">
