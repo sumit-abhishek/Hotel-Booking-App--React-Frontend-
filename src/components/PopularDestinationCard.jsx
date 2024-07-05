@@ -3,7 +3,7 @@ const PopularDestinationCard = ({ cardDetails }) => {
   return (
     <div className="card">
       <img src={cardDetails.image} className="card-img-top" alt="..." />
-      <div className="card-body">
+      <div className="card-body cardBody">
         <h5 className="card-title">{cardDetails.title}</h5>
         <p className="card-text">{cardDetails.desc}</p>
         <a href="#" className="btn btn-primary">

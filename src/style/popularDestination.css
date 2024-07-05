@@ -1,7 +1,6 @@
 .destination-main {
   display: flex;
   justify-content: center;
-  
 }
 .destination {
   padding-top: 2rem;
@@ -32,9 +31,11 @@
   height: 100%;
   width: 100%;
 }
-.card-body h5 {
+.cardBody h5 {
   text-align: center;
+  margin-bottom: 0.5rem !important;
+  font-weight: 500 !important;
 }
-.card-body a {
+.cardBody a {
   margin-left: 25%;
 }

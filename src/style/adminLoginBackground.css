@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+.backgroundBody {
+  background-color: #212529;
+  height: 100%;
+}
+.admin-login-logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+#adminDashboard a,
+#backToHome a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.admin-login-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.admin-login {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  gap: 1rem;
+}
