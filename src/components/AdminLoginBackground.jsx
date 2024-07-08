@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import "../style/adminLoginBackground.css";
+import { Link } from "react-router-dom";
 import AdminLoginForm from "./AdminLoginForm";
 
 const AdminLoginBackground = () => {
@@ -19,7 +20,9 @@ const AdminLoginBackground = () => {
 
           {/* <!-- Will Change to Forgot Password --> */}
           <span id="backToHome">
-            <a href="/index.html">← Go to Eureka</a>
+            <Link to="/">
+              <a>← Go to Eureka</a>
+            </Link>
           </span>
         </div>
       </section>

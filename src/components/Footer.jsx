@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/footer.css";
 import FooterCards from "./FooterCards";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
@@ -68,7 +69,9 @@ const Footer = () => {
             <span>Privacy Policy</span>
             <span>Cookies Policy</span>
             <span>
-              <a href="pages/admin-login.html">Admin</a>
+              <Link to="/admin">
+                <a href="#">Admin</a>
+              </Link>
             </span>
           </div>
         </div>

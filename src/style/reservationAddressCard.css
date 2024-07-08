@@ -1,0 +1,4 @@
+.address > div > input,
+.address > div > select {
+  border-radius: 30px;
+}

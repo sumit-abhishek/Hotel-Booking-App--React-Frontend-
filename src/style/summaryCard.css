@@ -1,0 +1,33 @@
+.summaryCard {
+  box-shadow: 8px 7px 8px #0000005c;
+  border-radius: 0.375rem;
+}
+.summaryCard div {
+  width: 100%;
+}
+.summaryCard div img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card-body-bottom {
+  font-weight: bold;
+  font-size: 20px;
+}
+.hotel-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-body-mid {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+  border-width: 100%;
+}
+.card-body-top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+}
+.booking-summary-lable {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

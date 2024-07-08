@@ -1,0 +1,7 @@
+.booking {
+  box-shadow: 8px 7px 8px #0000005c;
+  border-radius: 0.375rem;
+}
+.booking > div > div > h5 {
+  font-weight: 500 !important;
+}

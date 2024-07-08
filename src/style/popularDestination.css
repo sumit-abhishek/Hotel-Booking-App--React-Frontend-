@@ -22,11 +22,11 @@
   gap: 1rem;
   justify-content: center;
 }
-.card {
+.popularDestinationCard {
   box-shadow: 8px 7px 8px #00000096;
   width: 22rem;
 }
-.card img {
+.popularDestinationCard img {
   object-fit: cover;
   height: 100%;
   width: 100%;

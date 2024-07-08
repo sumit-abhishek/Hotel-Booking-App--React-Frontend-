@@ -1,7 +1,7 @@
 import React from "react";
 const PopularDestinationCard = ({ cardDetails }) => {
   return (
-    <div className="card">
+    <div className="card popularDestinationCard">
       <img src={cardDetails.image} className="card-img-top" alt="..." />
       <div className="card-body cardBody">
         <h5 className="card-title">{cardDetails.title}</h5>
