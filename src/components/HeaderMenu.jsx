@@ -4,22 +4,16 @@ const HeaderMenu = () => {
   return (
     <div className="navbar">
       <Link to="/" className="pointer">
-        <a href="">Home</a>
+        Home
       </Link>
-      <Link to="/rooms">
-        <a href="#">Rooms</a>
-      </Link>
+      <Link to="/rooms">Rooms</Link>
       <a href="#">Blog</a>
       <a href="#">About</a>
-      <Link to="/login">
-        <a href="" id="login-button">
-          Login
-        </a>
+      <Link to="/login" id="login-button">
+        Login
       </Link>
-      <Link to="/signup">
-        <a href="#" id="register-button">
-          Register
-        </a>
+      <Link to="/signup" id="register-button">
+        Register
       </Link>
     </div>
   );

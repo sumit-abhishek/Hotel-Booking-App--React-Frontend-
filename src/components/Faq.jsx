@@ -40,8 +40,8 @@ const Faq = () => {
       <h2>Frequently Asked Questions</h2>
       <div className="faq">
         <div className="accordion" id="accordionExample">
-          {accordianDetails.map((item) => (
-            <FaqAccordion accordionDetails={item} />
+          {accordianDetails.map((item, index) => (
+            <FaqAccordion key={index} accordionDetails={item} />
           ))}
         </div>
       </div>

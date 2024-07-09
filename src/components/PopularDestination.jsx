@@ -52,8 +52,8 @@ const PopularDestination = () => {
           </p>
         </div>
         <div className="destination-section">
-          {popularDestinationCardDetails.map((item) => (
-            <PopularDestinationCard cardDetails={item} />
+          {popularDestinationCardDetails.map((item, index) => (
+            <PopularDestinationCard key={index} cardDetails={item} />
           ))}
         </div>
       </div>

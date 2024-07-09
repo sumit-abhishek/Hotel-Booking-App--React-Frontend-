@@ -52,7 +52,7 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-top">
           <FooterCards name={"explore"} data={exploreData} />
-          <FooterCards name={"booking"} data={bookingData} />
+          <FooterCards name={"booking-footer"} data={bookingData} />
           <FooterCards name={"company"} data={companyData} />
           <FooterCards name={"support"} data={supportData} />
           <FooterCards name={"footer-social-links"} data={socialData} />
@@ -69,9 +69,7 @@ const Footer = () => {
             <span>Privacy Policy</span>
             <span>Cookies Policy</span>
             <span>
-              <Link to="/admin">
-                <a href="#">Admin</a>
-              </Link>
+              <Link to="/admin">Admin</Link>
             </span>
           </div>
         </div>

@@ -1,61 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../style/signUpForm.css";
+import FormInput from "./FormInput";
+import { text } from "@fortawesome/fontawesome-svg-core";
 const SignupForm = () => {
+  const navigate = useNavigate();
+  const [value, setValue] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  //Functions for form validation
+  function isValidFullName(fullName) {
+    return /^[a-zA-Z ]+$/.test(fullName);
+  }
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function isStrongPassword(password) {
+    return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/.test(
+      password
+    );
+  }
+  const signupData = JSON.parse(localStorage.getItem("signupData")) || [];
+  const handleSubmitFunction = () => {
+    //Validating Inputs
+    if (!value.fullName.trim() || !isValidFullName(fullName.value)) {
+      alert("Please Enter a valid Full Name.");
+      return;
+    }
+    if (!value.email.trim() || !isValidEmail(email.value)) {
+      alert("Please enter a valid Email Address.");
+      return;
+    }
+
+    if (!value.password.trim() || !isStrongPassword(password.value)) {
+      alert(
+        "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one digit, and one special character."
+      );
+      return;
+    }
+    if (password.value.trim() !== value.confirmPassword.trim()) {
+      alert("Password must Match.");
+      return;
+    }
+    //Email Already Exist
+    const emailExist = signupData.some((e) => e.email === value.email);
+    if (emailExist) {
+      alert("Email already exists");
+      return;
+    }
+    signupData.push(value);
+    localStorage.setItem("signupData", JSON.stringify(signupData));
+    navigate("/login");
+  };
   return (
-    <form className="form user-sign-form ">
-      <div className="mb-3">
-        <label htmlFor="name" className="form-label">
-          Name
-        </label>
-        <input
-          type="text"
-          className="form-control"
-          id="fullName"
-          autoComplete="name"
-          placeholder="Your Name"
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="email" className="form-label">
-          Email address
-        </label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          autoComplete="email"
-          placeholder="youremail@mail.com"
-          required
-        />
-        <div id="email" className="form-text">
-          We'll never share your email with anyone else.
-        </div>
-      </div>
-      <div className="mb-3">
-        <label htmlFor="password" className="form-label">
-          Password
-        </label>
-        <input
-          type="password"
-          className="form-control"
-          id="password"
-          placeholder="min. 8 Character"
-          required
-        />
-      </div>
-      <div className="mb-3">
-        <label htmlFor="confirmPassword" className="form-label">
-          Confirm Password
-        </label>
-        <input
-          type="password"
-          className="form-control"
-          id="confirmPassword"
-          placeholder="min. 8 Character"
-          required
-        />
-      </div>
+    <form className="form user-sign-form " onSubmit={handleSubmitFunction}>
+      <FormInput
+        type={"text"}
+        lable={"Full Name"}
+        name={"fullName"}
+        placeholder={"Enter Your Full Name"}
+        onChange={(e) => setValue({ ...value, fullName: e.target.value })}
+      />
+      <FormInput
+        type={text}
+        lable={"Email Address"}
+        name={"email"}
+        placeholder={"yourmail@example.com"}
+        onChange={(e) => setValue({ ...value, email: e.target.value })}
+      />
+      <FormInput
+        type={"password"}
+        lable={"Password"}
+        name={"password"}
+        placeholder={"Enter New Password"}
+        onChange={(e) => setValue({ ...value, password: e.target.value })}
+      />
+      <FormInput
+        type={"password"}
+        lable={"Confirm Password"}
+        name={"confirmPassword"}
+        placeholder={"Confirm Your Password"}
+        onChange={(e) =>
+          setValue({ ...value, confirmPassword: e.target.value })
+        }
+      />
+
       <div className="mb-3 form-check">
         <input
           type="checkbox"

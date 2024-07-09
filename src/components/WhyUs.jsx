@@ -30,8 +30,8 @@ const WhyUs = () => {
           <h2>Here's Why People Choose Eureka</h2>
         </div>
         <div className="why-us-details">
-          {cardDetails.map((item) => (
-            <WhyUsCards cardDetails={item} />
+          {cardDetails.map((item, index) => (
+            <WhyUsCards key={index} cardDetails={item} />
           ))}
         </div>
       </div>
