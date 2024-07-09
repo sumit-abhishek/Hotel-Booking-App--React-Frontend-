@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/searchBar.css";
 
 const SearchBar = () => {
@@ -7,6 +7,10 @@ const SearchBar = () => {
   const handleLocationChange = (e) => {
     setLocation(e.target.value);
   };
+
+  useEffect(() => {
+    console.log(location);
+  }, [location]);
 
   return (
     <div className="search-bar">

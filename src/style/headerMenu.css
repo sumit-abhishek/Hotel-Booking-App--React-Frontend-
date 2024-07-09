@@ -1,0 +1,11 @@
+.logged-in-user {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.logged-in-user > img {
+  height: 100%;
+  width: 100% !important;
+}
