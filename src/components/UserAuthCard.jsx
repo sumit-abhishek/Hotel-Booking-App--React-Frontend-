@@ -29,7 +29,7 @@ const UserAuthCard = ({ formType }) => {
                   <span className="or">OR</span>
                   <LoginForm />
                   <span>
-                    No account?{" "}
+                    No account?
                     <Link to="/signup">
                       <a>Create One</a>
                     </Link>
@@ -46,7 +46,7 @@ const UserAuthCard = ({ formType }) => {
                   <SignupForm />
                   <span>
                     <span>
-                      Have an account?{" "}
+                      Have an account?
                       <Link to="/login">
                         <a>Log in</a>
                       </Link>

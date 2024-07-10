@@ -5,6 +5,7 @@ import Rooms from "./pages/Rooms";
 import Admin from "./pages/Admin";
 import Reservation from "./pages/Reservation";
 import { Route, Routes } from "react-router-dom";
+import Confirmation from "./pages/Confirmation";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/rooms" element={<Rooms />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
         <Route path="/reservation" element={<Reservation />}></Route>
+        <Route path="/confirmation" element={<Confirmation />}></Route>
       </Routes>
     </>
   );
