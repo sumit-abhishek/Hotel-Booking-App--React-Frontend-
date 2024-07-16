@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/loginForm.css";
 import FormInput from "./FormInput";
+import { fetchFromLocalStorage, saveToLocalStorage } from "../services";
 const LoginForm = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState({
@@ -9,7 +10,7 @@ const LoginForm = () => {
     password: "",
   });
 
-  const signupData = JSON.parse(localStorage.getItem("signupData"));
+  const signupData = fetchFromLocalStorage("signupData");
 
   const handleSubmit = () => {
     const userExist = signupData.find((e) => e.email === value.email);
@@ -20,7 +21,7 @@ const LoginForm = () => {
       alert("Wrong Password Entered");
     } else {
       const loginUserData = signupData.filter((e) => e.email === email.value);
-      localStorage.setItem("loginData", JSON.stringify(loginUserData));
+      saveToLocalStorage("loginData", loginUserData);
       navigate("/");
     }
   };

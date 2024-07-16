@@ -1,0 +1,14 @@
+.dashboard-top {
+  display: flex;
+  height: 40px;
+  padding: 0.4rem 0rem 0.4rem 1rem;
+  text-align: center;
+  justify-content: space-between;
+}
+.dashboard-top-admin {
+  display: flex;
+  width: 15%;
+  gap: 1rem;
+  justify-content: end;
+  color: aliceblue;
+}

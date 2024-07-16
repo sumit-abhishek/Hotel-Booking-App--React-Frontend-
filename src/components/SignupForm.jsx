@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../style/signUpForm.css";
 import FormInput from "./FormInput";
 import { text } from "@fortawesome/fontawesome-svg-core";
+import { fetchFromLocalStorage, saveToLocalStorage } from "../services";
+
 const SignupForm = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState({
@@ -25,7 +27,7 @@ const SignupForm = () => {
       password
     );
   }
-  const signupData = JSON.parse(localStorage.getItem("signupData")) || [];
+  const signupData = fetchFromLocalStorage("signupData") || [];
   const handleSubmitFunction = () => {
     //Validating Inputs
     if (!value.fullName.trim() || !isValidFullName(fullName.value)) {
@@ -54,7 +56,7 @@ const SignupForm = () => {
       return;
     }
     signupData.push(value);
-    localStorage.setItem("signupData", JSON.stringify(signupData));
+    saveToLocalStorage("signupData", signupData);
     navigate("/login");
   };
   return (

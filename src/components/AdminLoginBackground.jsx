@@ -15,10 +15,11 @@ const AdminLoginBackground = () => {
 
           <AdminLoginForm />
           <span id="adminDashboard">
-            <a href="admin.html">Go to Admin Dashboard →</a>
+            <Link to="/admin-dashboard">
+              <a>Go to Admin Dashboard →</a>
+            </Link>
           </span>
 
-          {/* <!-- Will Change to Forgot Password --> */}
           <span id="backToHome">
             <Link to="/">
               <a>← Go to Eureka</a>

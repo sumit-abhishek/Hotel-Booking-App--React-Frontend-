@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/searchBar.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -16,6 +16,7 @@ const SearchBar = () => {
   const userInputData = JSON.parse(localStorage.getItem("userInputData")) || [];
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(loginUserData);
     if (loginUserData) {
       if (
         !input.location ||

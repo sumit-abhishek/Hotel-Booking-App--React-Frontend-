@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Rooms from "./pages/Rooms";
 import Admin from "./pages/Admin";
+import AdminDashboard from "./pages/AdminDashboard";
 import Reservation from "./pages/Reservation";
 import { Route, Routes } from "react-router-dom";
 import Confirmation from "./pages/Confirmation";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/admin" element={<Admin />}></Route>
         <Route path="/reservation" element={<Reservation />}></Route>
         <Route path="/confirmation" element={<Confirmation />}></Route>
+        <Route path="/admin-dashboard" element={<AdminDashboard />}></Route>
       </Routes>
     </>
   );
