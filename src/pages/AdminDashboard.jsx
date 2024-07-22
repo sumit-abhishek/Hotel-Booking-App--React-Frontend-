@@ -1,7 +1,8 @@
 import React from "react";
 import "../style/adminDashboard.css";
 import AdminDashboardHeader from "../components/AdminDashboardHeader";
-import AdminDashboardNav from "../components/AdminDashboardNav";
+// import AdminDashboardNav from "../components/AdminDashboardNav";
+import AdminDashboardBody from "../components/AdminDashboardBody";
 
 const AdminDashboard = () => {
   return (
@@ -9,7 +10,7 @@ const AdminDashboard = () => {
       <div className="dashboard-main">
         <div className="dashboard">
           <AdminDashboardHeader />
-          <AdminDashboardNav />
+          <AdminDashboardBody />
         </div>
       </div>
     </>
