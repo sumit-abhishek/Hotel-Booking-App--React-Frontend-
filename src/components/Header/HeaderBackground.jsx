@@ -6,7 +6,6 @@ const HeaderBackground = () => {
   return (
     <>
       <div className="background">
-        <Header />
         <SearchBar />
       </div>
     </>
