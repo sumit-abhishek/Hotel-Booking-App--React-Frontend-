@@ -1,8 +1,8 @@
 import React from "react";
-import UserAuthCard from "../components/UserAuthCard";
+import UserAuthCard from "../components/User/UserAuthCard";
 
 const Login = () => {
-  return <UserAuthCard formType={"login"}/>;
+  return <UserAuthCard formType={"login"} />;
 };
 
 export default Login;

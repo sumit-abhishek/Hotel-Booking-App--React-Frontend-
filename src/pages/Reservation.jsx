@@ -1,5 +1,5 @@
 import React from "react";
-import ReservationBackground from "../components/ReservationBackground";
+import ReservationBackground from "../components/Reservation/ReservationBackground";
 
 const Reservation = () => {
   return <ReservationBackground />;

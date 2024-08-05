@@ -16,3 +16,15 @@ export function fetchFromLocalStorage(key) {
     return value;
   }
 }
+
+//Functions for form validation
+export function isValidFullName(fullName) {
+  return /^[a-zA-Z ]+$/.test(fullName);
+}
+export function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+export function isStrongPassword(password) {
+  return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/.test(password);
+}

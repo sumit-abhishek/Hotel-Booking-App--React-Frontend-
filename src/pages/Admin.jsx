@@ -1,5 +1,5 @@
 import React from "react";
-import AdminLoginBackground from "../components/AdminLoginBackground";
+import AdminLoginBackground from "../components/Admin/AdminLoginBackground";
 const Admin = () => {
   return (
     <div>

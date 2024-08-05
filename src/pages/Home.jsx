@@ -1,7 +1,7 @@
 import React from "react";
-import HeaderBackground from "../components/HeaderBackground";
+import HeaderBackground from "../components/Header/HeaderBackground";
 import MiddleBackground from "../components/MiddleBackground";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (

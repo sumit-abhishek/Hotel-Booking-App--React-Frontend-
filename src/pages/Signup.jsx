@@ -1,5 +1,5 @@
 import React from "react";
-import UserAuthCard from "../components/UserAuthCard";
+import UserAuthCard from "../components/User/UserAuthCard";
 const Signup = () => {
   return <UserAuthCard formType={"signup"} />;
 };

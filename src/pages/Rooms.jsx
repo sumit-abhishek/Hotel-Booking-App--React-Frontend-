@@ -1,6 +1,6 @@
-import React from "react";
-import RoomsFilter from "../components/RoomsFilter";
-import RoomsCard from "../components/RoomsCard";
+import React, { useState } from "react";
+import RoomsFilter from "../components/Rooms/RoomsFilter";
+import RoomsCard from "../components/Rooms/RoomsCard";
 import jaypee from "../assets/jaypee.jpg";
 import jwmarriott from "../assets/jw-marriott.jpg";
 import bagoristay from "../assets/bagori-stay.jpg";
@@ -29,6 +29,7 @@ const popularFilterData = [
   { text: "bonfire", label: "Bonfire" },
   { text: "trek", label: "Trekking" },
 ];
+
 const Rooms = () => {
   return (
     <>
@@ -64,6 +65,7 @@ const Rooms = () => {
             <RoomsCard
               data={{
                 title: "Hotel Jaypee",
+                price: 6000,
                 image: jaypee,
                 distance: 600,
                 description:
@@ -73,6 +75,7 @@ const Rooms = () => {
             <RoomsCard
               data={{
                 title: "Hotel JW Marriott",
+                price: 5000,
                 image: jwmarriott,
                 distance: 800,
                 description:
@@ -82,6 +85,7 @@ const Rooms = () => {
             <RoomsCard
               data={{
                 title: "Bagori Stay",
+                price: 4000,
                 image: bagoristay,
                 distance: 800,
                 description:

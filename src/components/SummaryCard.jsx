@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cardImage from "../assets/kanatal-orchids.jpg";
 import "../style/summaryCard.css";
+import { fetchFromLocalStorage } from "../services";
 const SummaryCard = () => {
+  const [data, setData] = useState({});
+  const [totalNight, setTotalNight] = useState();
+  const [totalPrice, setTotalPrice] = useState(0);
+  useEffect(() => {
+    //For Adding Hotel Name
+    const hotelDetails = fetchFromLocalStorage("hotelDetails");
+    setData(hotelDetails);
+
+    //For Adding Total Night
+    const userInputData = fetchFromLocalStorage("userInputData");
+    const checkInDate = new Date(
+      userInputData[userInputData.length - 1].checkInDate
+    );
+    const checkOutDate = new Date(
+      userInputData[userInputData.length - 1].checkOutDate
+    );
+    const timeDifference = checkOutDate.getTime() - checkInDate.getTime();
+    const dayDifference = timeDifference / (24 * 3600 * 1000);
+    setTotalNight(dayDifference);
+
+    //For Adding Total Night
+    const priceOfHotel = hotelDetails.price;
+    const totalPrice = priceOfHotel * dayDifference;
+    setTotalPrice(totalPrice);
+  }, []);
+
   return (
     <div className="summaryCard">
       <div className="card">
@@ -9,7 +36,7 @@ const SummaryCard = () => {
         <div className="card-body hotel-details">
           <div className="card-body-top">
             <h5 className="card-title" id="hotel-name">
-              Kanatal Orchids
+              {data.name}
             </h5>
             <p className="card-text">
               <i className="fa-solid fa-location-dot"></i>
@@ -20,11 +47,11 @@ const SummaryCard = () => {
             <h5>Price Detail</h5>
             <span className="d-flex justify-content-between">
               <p>
-                &#x20B9; <span id="normal-price">2000</span> x
-                <span id="stay-night"> 3</span> nights
+                &#x20B9; <span id="normal-price">{data.price}</span> x
+                <span id="stay-night"> {totalNight}</span> nights
               </p>
               <p>
-                &#x20B9; <span id="total-price">6000</span>
+                &#x20B9; <span id="total-price">{totalPrice}</span>
               </p>
             </span>
             <span className="d-flex justify-content-between">

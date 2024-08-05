@@ -1,5 +1,6 @@
 .dashboard-bottom {
   display: flex;
+  height: 100vh;
 }
 .dashboard-bottom-left {
   display: flex;
@@ -7,4 +8,10 @@
   gap: 2rem;
   width: 20%;
   padding: 16px 35.2px 16px 16px;
+}
+#dashboard-button,
+#booking-button,
+#property-button,
+#logout-button {
+  width: 100%;
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import WhyUs from "./WhyUs";
-import PopularDestination from "./PopularDestination";
+import PopularDestination from "../components/Destination/PopularDestination";
 import "../style/middleBackground.css";
-import Faq from "../components/Faq";
+import Faq from "../components/Faqs/Faq";
+import WhyUs from "./Why Us/WhyUs";
 const MiddleBackground = () => {
   return (
     <div className="middleBackground">

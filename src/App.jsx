@@ -19,7 +19,7 @@ function App() {
         <Route path="/admin" element={<Admin />}></Route>
         <Route path="/reservation" element={<Reservation />}></Route>
         <Route path="/confirmation" element={<Confirmation />}></Route>
-        <Route path="/admin-dashboard" element={<AdminDashboard />}></Route>
+        <Route path="/admin/*" element={<AdminDashboard />}></Route>
       </Routes>
     </>
   );
