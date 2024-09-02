@@ -61,6 +61,7 @@ const SignupForm = () => {
         placeholder={"Enter Your Full Name"}
         onChange={(e) => setValue({ ...value, fullName: e.target.value })}
       />
+
       <FormInput
         type={text}
         lable={"Email Address"}

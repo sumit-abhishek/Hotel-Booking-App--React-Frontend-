@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AdminDashboardNav from "./AdminDashboardNav";
 import AdminRoutes from "./AdminRoutes";
+import { BookingProvider } from "../../Context/BookingContext";
 
 const AdminDashboardBody = () => {
   const [component, setComponent] = useState("");
@@ -13,7 +14,9 @@ const AdminDashboardBody = () => {
         clickFunction={clickFunction}
         selecetdComponent={component}
       />
-      <AdminRoutes />
+      <BookingProvider>
+        <AdminRoutes />
+      </BookingProvider>
     </div>
   );
 };

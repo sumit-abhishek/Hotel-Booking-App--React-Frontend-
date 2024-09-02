@@ -12,7 +12,6 @@ const FormInput = ({ type, lable, name, placeholder, onChange }) => {
         id={name}
         placeholder={placeholder}
         onChange={onChange}
-        required
       />
     </div>
   );

@@ -6,7 +6,6 @@ import UserModal from "../User/UserModal";
 
 const HeaderMenu = () => {
   const [modalShow, setModalShow] = useState(false);
-
   const handleModalShow = () => {
     setModalShow(true);
   };

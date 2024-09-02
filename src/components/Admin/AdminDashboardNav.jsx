@@ -39,7 +39,7 @@ const data = [
 
 const AdminDashboardNav = ({ clickFunction }) => {
   const selectedComponentArr = window.location.href.split("/");
-  console.log(selectedComponentArr[selectedComponentArr.length - 1]);
+
   return (
     <div className="dashboard-bottom-left">
       {data.map((item, index) => {

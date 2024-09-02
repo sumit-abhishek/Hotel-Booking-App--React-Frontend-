@@ -19,16 +19,18 @@ import {
 import Layout from "./Layout";
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path="" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/rooms" element={<Rooms />} />
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/reservation" element={<Reservation />} />
-      <Route path="/confirmation" element={<Confirmation />} />
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route path="" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/rooms" element={<Rooms />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/reservation" element={<Reservation />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+      </Route>
       <Route path="/admin/*" element={<AdminDashboard />} />
-    </Route>
+    </>
   )
 );
 ReactDOM.createRoot(document.getElementById("root")).render(
