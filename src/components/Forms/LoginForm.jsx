@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../style/loginForm.css";
 import FormInput from "../FormInput";
@@ -18,7 +18,6 @@ const LoginForm = () => {
   });
 
   const signupData = fetchFromLocalStorage("signupData");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setError({ email: false, password: false });
@@ -29,13 +28,13 @@ const LoginForm = () => {
       });
       return;
     }
-    if (signupData == null) {
+    if (!signupData) {
       toast.error("No such user found.  Please Register First");
       return;
     }
     const userExist = signupData.find((e) => e.email === value.email);
     if (!userExist) {
-      toast.error("Please Check The Email");
+      toast.error("No such user found. Please Check The Email or Signup First");
       return;
     } else if (userExist.password !== value.password) {
       toast.error("Wrong Password Entered");
@@ -56,10 +55,16 @@ const LoginForm = () => {
             lable={"Email Address"}
             name={"email"}
             placeholder={"yourmail@example.com"}
-            onChange={(e) => setValue({ ...value, email: e.target.value })}
+            onChange={(e) => {
+              setValue((prev) => ({ ...prev, email: e.target.value }));
+              setError((prev) => ({ ...prev, email: !e.target.value }));
+            }}
+            className={error.email ? "is-invalid" : ""}
           />
-          {error.email && (
-            <label className="error-label">This field is required</label>
+          {error.email ? (
+            <small className="text-danger">This Field is Required</small>
+          ) : (
+            ""
           )}
         </>
         <>
@@ -68,10 +73,15 @@ const LoginForm = () => {
             lable={"Password"}
             name={"password"}
             placeholder={"Enter Your Password"}
-            onChange={(e) => setValue({ ...value, password: e.target.value })}
+            onChange={(e) => {
+              const password = e.target.value;
+              setValue((prev) => ({ ...prev, password }));
+              setError((prev) => ({ ...prev, password: !password }));
+            }}
+            className={error.password ? "is-invalid" : ""}
           />
           {error.password && (
-            <label className="error-label">This field is required</label>
+            <small className="text-danger">This Field is Required</small>
           )}
         </>
         <button type="submit" className="btn btn-primary">

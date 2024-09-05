@@ -10,7 +10,7 @@ const BookingDetailsAdmin = () => {
   useEffect(() => {
     booking.fetchBookingData();
   }, []);
-  // console.log(booking.hotelDetails);
+
   if (!booking.bookingDetails) {
     return <div>Loading...</div>;
   }

@@ -5,3 +5,6 @@
   color: red;
   font-size: 15px;
 }
+.input-error {
+  border: 2px solid red;
+}
