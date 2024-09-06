@@ -35,6 +35,7 @@
   background-image: url(../assets/signup-image.jpg);
 }
 .user-auth-form-area-main {
+  background-attachment: scroll;
   width: 50%;
   background-image: url(../assets/why-us-bg.jpg);
   background-position: center;
@@ -44,6 +45,7 @@
   color: white;
 }
 .user-auth-form-area {
+  /* height: 610px; */
   display: flex;
   flex-direction: column;
   gap: 3rem;

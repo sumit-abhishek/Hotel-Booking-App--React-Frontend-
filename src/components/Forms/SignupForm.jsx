@@ -65,7 +65,7 @@ const SignupForm = () => {
     }
     signupData.push(value);
     saveToLocalStorage("signupData", signupData);
-    // navigate("/login");
+    navigate("/login");
   };
   return (
     <>

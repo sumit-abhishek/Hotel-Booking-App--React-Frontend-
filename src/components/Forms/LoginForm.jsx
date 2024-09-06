@@ -49,7 +49,7 @@ const LoginForm = () => {
     <>
       <ToastContainer />
       <form className="user-login-form" onSubmit={handleSubmit}>
-        <>
+        <div className="login-form-input">
           <FormInput
             type={"text"}
             lable={"Email Address"}
@@ -66,8 +66,8 @@ const LoginForm = () => {
           ) : (
             ""
           )}
-        </>
-        <>
+        </div>
+        <div className="login-form-input">
           <FormInput
             type={"password"}
             lable={"Password"}
@@ -83,7 +83,7 @@ const LoginForm = () => {
           {error.password && (
             <small className="text-danger">This Field is Required</small>
           )}
-        </>
+        </div>
         <button type="submit" className="btn btn-primary">
           Login Now
         </button>
